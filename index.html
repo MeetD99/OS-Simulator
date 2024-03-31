@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <a class="navbar-brand" href="#">OS Simulator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h2 class="text-center my-4" id="algorithms">Algorithms</h2>
+
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                    <div class="card mb-4">
+                      <h1>Shortest Job First Scheduling Algorithm</h1>
+                      <p>Shortest Job First (SJF) scheduling algorithm is a non-preemptive scheduling algorithm used in operating systems and CPU scheduling. The main idea behind SJF is to execute the process with the shortest burst time first.
+
+                      In SJF scheduling, the scheduler selects the process with the smallest burst time from the ready queue for execution. Burst time refers to the time required by a process to complete its execution on the CPU. Once a process starts its execution, it continues until it finishes or until a higher priority process arrives. SJF scheduling algorithm is optimal in terms of minimizing average waiting time for a given set of processes, assuming that all processes are available at the start.</p>
+                      <div class="btn-container">
+                          <a href="templates/sjf.html" class="btn">Simulate</a>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card mb-4">
+                      <h1>Dining Philosopher's Problem with Semaphore</h1>
+                      <p>The Dining Philosophers Problem is a classic synchronization problem used to illustrate the challenges of resource allocation and deadlock avoidance in concurrent systems. In this problem, a number of philosophers sit around a circular table with a plate of spaghetti in front of each. Between each pair of adjacent philosophers, there is a single fork. The philosophers alternate between thinking and eating, and to eat, they need two forks. However, they must avoid deadlock, where each philosopher holds one fork and waits indefinitely for the other.</p>
+                      <div class="btn-container">
+                          <a href="templates/dining.html" class="btn">Simulate</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <h1>C-Look Disc Scheduling Algorithm</h1>
+                        <p>The C-Look Disk Scheduling Algorithm is a variation of the traditional disk scheduling method, designed to optimize seek time when accessing data on a disk. Unlike the C-Scan algorithm, which always scans to the end of the disk regardless of the location of pending requests, C-Look scans only to the last request in the current direction before reversing direction. By eliminating unnecessary scanning to the end of the disk, C-Look reduces overhead and improves disk access efficiency.
+  
+                        This algorithm prioritizes pending requests based on the current direction of the disk arm, resulting in more efficient movement and reduced average response time.</p>
+                        <div class="btn-container">
+                            <a href="#" class="btn">Simulate</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <h1>First-in-First-Out(FIFO) page Replacement Algorithm</h1>
+                        <p>The First-in-First-Out (FIFO) page replacement algorithm is one of the simplest and most intuitive methods used in operating systems to manage memory. In FIFO, pages are evicted from memory in the order they were brought in, akin to a queue structure. When a page fault occurs and there is no space left in memory, the oldest page (the one that entered memory first) is replaced with the new incoming page. FIFO operates on the principle that the pages that have been in memory the longest are less likely to be needed in the near future, making them good candidates for replacement.</p>
+                        <div class="btn-container">
+                            <a href="#" class="btn">Simulate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  </html>

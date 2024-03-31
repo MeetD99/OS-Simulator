@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+      <a class="navbar-brand" href="/index.html">OS Simulator</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+  <div id="SJF-title"><h1 style="text-align: center;"> Simulation for Dining Philosophers Problem <br> with Semaphores </h1></div>
+  
+  <div class="legend">
+    <div class="legend-row">
+      <div class="legend-item">
+        <div class="color-box" style="background-color: red;"></div>
+        <span class="text">Thinking</span>
+      </div>
+      <div class="legend-item">
+        <div class="color-box" style="background-color: green;"></div>
+        <span class="text">Eating</span>
+      </div>
+      <div class="legend-item">
+        <div class="color-box" style="background-color: #1F618D;"></div>
+        <span class="text">Finished</span>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="outer-table">
+  <div class="dining-table-container">
+      <div class="table">Table</div>
+      <li style="--i:0; --clr:#;"><div id="philosopher0" class="philosopher">0</div></li>
+      <li style="--i:1; --clr:#;"><div id="philosopher1" class="philosopher">1</div></li>
+      <li style="--i:2; --clr:#;"><div id="philosopher2" class="philosopher">2</div></li>
+      <li style="--i:3; --clr:#;"><div id="philosopher3" class="philosopher">3</div></li>
+      <li style="--i:4; --clr:#;"><div id="philosopher4" class="philosopher">4</div></li>
+      
+    </div>
+  </div>  
+  <div style="display: flex; justify-content: center; align-items: center;"><button type="submit" class="SimulateButton" id="simbutton">Simulate</button><button type="submit" class="SimulateButton" id="resbutton">Console Logs</button></div>
+  <div id="dining-results" style="display: none;"></div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="/scripts/dining.js"></script>
+</body>
+</html>

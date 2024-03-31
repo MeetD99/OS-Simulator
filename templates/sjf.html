@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Shortest Job First Algorithm</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+        <a class="navbar-brand" href="/index.html">OS Simulator</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div id="SJF-title"><h1 > Simulation for Shortest Job First Algorithm! </h1></div>
+    <div id="Input_field">
+        Enter the Number of Processes:  <input type="number" class="process_no" style="margin-left:5px;"> <button type="submit" class="process_no_button" id="process_no_button">Submit</button>
+    </div>
+
+    <div class="table_div">
+      <div id="table-container"></div>
+      <button id="simulate-button" type="submit" style="display: none;">Simulate</button>
+    </div>
+
+    <div id="results-container" class="results">
+
+    
+    </div>
+    <h2 style="text-align: center; display: none; margin-top: 30px;" id="Gantt-Title">Gantt Chart</h2>
+    <div class="gantt-div"><div id="ganttChart" class="gantt"></div><div id="timeline"></div></div>
+
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Javascript for Computation -->
+    <script src="/scripts/sjf.js"></script>
+    
+    
+
+</body>
+</html>

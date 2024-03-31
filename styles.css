@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  background-color: #f8f9fa; /* Set a light background color */
+  font-family: Tinos, sans-serif; /* Set Google Font Roboto as default */
+  color: #333; /* Set default text color */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-custom {
+  background-color: #2C3E50 !important; /* Change navbar background color */
+  border-bottom: 2px solid #1F618D; /* Add bottom border */
+}
+
+.navbar-brand {
+  color: #FFFFFF !important; /* Change navbar brand color to white */
+  font-size: 1.8rem; /* Increase font size */
+}
+
+.nav-link {
+  color: #FFFFFF !important; /* Change navbar link color to white */
+  font-size: 1.2rem; /* Increase font size */
+}
+
+/* Style for cards */
+.card {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.card h1{
+  text-align: left;
+}
+
+.card p{
+  text-align: justify;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #3498DB, #9B59B6); /* Gradient background */
+  opacity: 0.8;
+  z-index: -1;
+  transition: opacity 0.3s;
+}
+
+.card:hover::before {
+  opacity: 0.5;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Style for headings */
+h1, h2 {
+  color: #1F618D; /* Change heading color */
+}
+
+/* Style for paragraphs */
+p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Style for buttons */
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.btn {
+  background-color: #1F618D; /* Change button color */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #E67E22; /* Change button color on hover */
+}
+
+#SJF-title, #Input_field{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#Input_field button{
+  margin-left: 5px;
+  color: white;
+  background-color: #1F618D;
+}
+
+.table_div button, .SimulateButton{
+  margin-top: 10px;
+  color: white;
+  background-color: #1F618D;
+}
+
+.SimulateButton{
+  margin-top: 50px;
+}
+#resbutton{
+  margin-left: 20px;
+}
+
+.table_div{
+  margin-top: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gantt-div{
+  margin: 0 70px 0 70px;
+  font-size: 16px;
+}
+
+.results > table{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.results tbody td {
+  padding: 0 53px 0 53px;
+}
+
+.gantt{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#table-container td, #table-container th{
+  text-align: center;
+  padding: 6px;
+}
+
+@media (max-width: 993px){
+  .card h1{
+    font-size: 25px;
+  }
+  .card p {
+    font-size: 13px;
+  }
+}
+/* Additional styling for responsive design */
+@media (max-width: 768px) {
+  .card {
+      margin-bottom: 20px;
+  }
+  #algorithms{
+    font-size: 25px;
+  }
+  .card h1{
+    font-size: 15px;
+  }
+  .card p, .btn {
+    font-size: 12px;
+  }
+
+  #table-container .table, .table_div button, .results, .SimulateButton{
+    font-size: 12px;
+  }
+
+  .gantt-div{
+    font-size: 12px;
+  }
+  .results tbody td {
+    padding: 0 42px 0 42px;
+  }
+
+  #SJF-title h1{
+    font-size: 20px;
+  }
+  #Input_field{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 568px) {
+  
+
+  #table-container .table, .table_div button, .results, .SimulateButton{
+    font-size: 10px;
+  }
+
+  .results tbody td {
+    padding: 0 37px 0 37px;
+  }
+
+  .gantt-div{
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 385px) {
+  #table-container .table, .table_div button, .results, .SimulateButton{
+    font-size: 8px;
+  }
+
+  .results tbody td {
+    padding: 0 32px 0 32px;
+  }
+
+  #SJF-title h1{
+    font-size: 15px;
+  }
+  #Input_field{
+    font-size: 8px;
+  }
+}
+
+.gantt-chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #000;
+
+  }
+
+  .task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #000;
+  }
+
+  .task:last-child {
+    border-right: none;
+  }
+
+  .task span {
+    padding: 5px;
+  }
+
+  #timeline{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+  }
+
+  .timeEle {
+    display: flex;
+    justify-content: right;
+    height: 100%;
+  }
+
+  
+
+  .outer-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+  .dining-table-container{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dining-table-container .table{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    background-color: #1F618D;
+    margin-top: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+  }
+  
+  .dining-table-container li{
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transform: rotate(calc(360deg/5 * var(--i)));
+    transform-origin: 140px;
+  }
+  .philosopher{
+    height: 30px;
+    width: 30px; 
+    background-color: #1F618D; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white;
+  }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .legend-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .color-box {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+  }
+  
+  .text {
+    margin-left: 5px;
+  }
+
+  #dining-results{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #dining-results p{
+    margin-bottom: 5px;
+  }
+  
+  #mypar{
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  #mypar ul li a{
+    color: black;
+    text-decoration: underline;
+  }
