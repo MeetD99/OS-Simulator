@@ -166,6 +166,7 @@ function handleKeyPress(event) {
         } else if (simulate_button.style.display !== 'none') {
             simulate_button.click();
         }
+        
     }
 }
 
@@ -176,6 +177,13 @@ document.addEventListener("keypress", handleKeyPress);
 $(document).ready(function(){
 
     $(".process_no_button").click(function(){
+        $(".results").empty();
+        document.getElementById("Gantt-Title").style.display = 'none';
+        const ganttChart = document.getElementById('ganttChart');
+        ganttChart.innerHTML = '';
+        ganttChart.style.border = 'none';
+        $("#timeline").empty();
+
         var processNo = parseInt($(".process_no").val());
         if(isNaN(processNo) || processNo <= 0) {
             alert("Please enter a valid number of processes.");
@@ -190,6 +198,7 @@ $(document).ready(function(){
         
         $("#table-container").html(tableHtml);
         $(".table_div button").show(); // Show the Simulate button after table creation
+        // $(".process_no").focus();
     });
 
     $(".table_div button").click(function() {
@@ -229,7 +238,7 @@ $(document).ready(function(){
             $("#Gantt-Title").show();
             createGanttChart(scheduler);
             
-
+            // $(".process_no").focus();
         }
         else{
             alert("Please fill in all arrival and burst times!");

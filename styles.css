@@ -255,9 +255,6 @@ p {
     border: 1px solid #000;
   }
 
-  .task:last-child {
-    border-right: none;
-  }
 
   .task span {
     padding: 5px;
