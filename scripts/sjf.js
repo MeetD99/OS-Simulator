@@ -155,18 +155,24 @@ function getAverage(array){
 
 var process_button = document.getElementById("process_no_button");
 var simulate_button = document.getElementById("simulate-button");
-
+let process_number = 0;
 // Function to handle key press event
 function handleKeyPress(event) {
     // Check if the pressed key is Enter (key code 13)
     if (event.keyCode === 13) {
         // Trigger button click event based on button visibility
-        if (process_button.style.display !== 'none' && simulate_button.style.display === 'none') {
+        if ((process_button.style.display !== 'none' && simulate_button.style.display === 'none') ||
+            (process_number != parseInt($(".process_no").val()))) {
+            process_number = parseInt($(".process_no").val());
             process_button.click();
         } else if (simulate_button.style.display !== 'none') {
             simulate_button.click();
         }
         
+    }
+
+    if (event.target.id === 'process_no_input' && event.key === 'Enter') {
+        process_button.click(); // Simulate click on the process button
     }
 }
 
