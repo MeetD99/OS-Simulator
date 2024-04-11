@@ -127,7 +127,7 @@ function delay(ms) {
 
 function displayResult(text) {
   const resultElement = document.createElement('p');
-  resultElement.textContent = text;
+  resultElement.textContent = "$ " + text;
   const diningResults = document.getElementById("dining-results");
   diningResults.appendChild(resultElement);
 }
