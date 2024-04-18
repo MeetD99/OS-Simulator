@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <title>C-LOOK Disk Scheduling Simulator</title>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
+    <a class="navbar-brand" href="/index.html">OS Simulator</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h1 class="clook-title">C-LOOK Disk Scheduling Simulator</h1>
+<div class="clook-input">
+    <div class="clook-in">
+        <label for="initialPosition">Initial Head Position:</label>
+        <input type="number" id="initialPosition" placeholder="Enter initial head position">
+    </div>
+    
+    <div class="clook-in">
+        <label for="direction">Direction:</label>
+        <select id="direction">
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+        </select>
+    </div>
+    
+    <div class="clook-in">
+        <label for="requests">Request Sequence (comma-separated):</label>
+        <input type="text" id="requests" placeholder="Enter request sequence">
+    </div>
+    
+    <button onclick="simulateCLook()">Simulate C-LOOK</button>
+</div>
+
+
+<div id="clook-results" class="clook-results" style="display: none;">
+    <h2>Results:</h2>
+    <p><strong>Initial Position of Head:</strong> <span id="initialHeadPosition"></span></p>
+    <p><strong>Total Number of Seek Operations:</strong> <span id="totalSeekOperations"></span></p>
+    <p><strong>Seek Sequence:</strong></p>
+    <ul id="seekSequence"></ul>
+</div>
+
+<script>
+function simulateCLook() {
+    const initialPosition = parseInt(document.getElementById("initialPosition").value);
+    const direction = document.getElementById("direction").value;
+    const requestSequenceInput = document.getElementById("requests").value;
+
+    // Check if all values are input by the user
+    if (!initialPosition || !direction || !requestSequenceInput) {
+        alert("Please input all values.");
+        return;
+    }
+
+    // Parse request sequence input
+    const requestSequence = requestSequenceInput.split(",").map(str => parseInt(str));
+
+    const diskScheduler = new DiskScheduler();
+    diskScheduler.setCLookInputs(requestSequence, initialPosition, direction);
+    diskScheduler.cLook();
+
+    const results = diskScheduler.getResults();
+    displayResults(results);
+
+    // Show the results div
+    document.getElementById("clook-results").style.display = "flex";
+}
+
+function displayResults(results) {
+    document.getElementById("initialHeadPosition").innerText = results.initialPosition;
+    document.getElementById("totalSeekOperations").innerText = results.totalSeekOperations;
+    
+    const seekSequenceList = document.getElementById("seekSequence");
+    seekSequenceList.innerHTML = results.seekSequence.join(" → ");
+}
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/scripts/cdisc.js"></script>
+
+</body>
+</html>

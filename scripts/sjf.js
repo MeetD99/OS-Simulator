@@ -71,7 +71,6 @@ class Scheduler{
             this.turnAroundTimes[id] = (this.time - nextProcess.at);
             this.waitingTimes[id] = (this.time - nextProcess.at - nextProcess.bt);
             this.removeProcess(nextProcess);
-            console.log("Processes: " + this.processes);
         } else {
            console.log("No Process to schedule at the moment!");        }
     }
@@ -230,6 +229,7 @@ $(document).ready(function(){
                 let bt = parseInt($("#burst_time_" + i).val());
                 scheduler.addProcess(pid, at, bt);
             }
+
 
             // Run the scheduler
             processor.run(scheduler);

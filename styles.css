@@ -157,6 +157,59 @@ p {
   margin: 0 auto;
 }
 
+.input-fifo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.input-fifo button {
+  color: white;
+  background-color: #1F618D;
+}
+
+.results-fifo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.clook-title{
+  margin-top: 20px;
+  text-align: center;
+}
+.clook-input{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+
+}
+
+.clook-input button {
+  color: white;
+  background-color: #1F618D;
+}
+
+.clook-results{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#seekSequence{
+  padding: 0;
+}
+
 #table-container td, #table-container th{
   text-align: center;
   padding: 6px;
@@ -202,6 +255,20 @@ p {
   #Input_field{
     font-size: 10px;
   }
+
+  .clook-title{
+    font-size: 30px;
+  }
+  .clook-input{
+    font-size: 12px;
+  }
+
+  .clook-results h2{
+    font-size: 25px;
+  }
+  .clook-results{
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 568px) {
@@ -217,6 +284,21 @@ p {
 
   .gantt-div{
     font-size: 8px;
+  }
+
+  .input-fifo, .results-fifo{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .input-fifo .input1-div, .input-fifo .input2-div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clook-title{
+    font-size: 20px;
   }
 }
 
@@ -234,6 +316,12 @@ p {
   }
   #Input_field{
     font-size: 8px;
+  }
+  .clook-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 
